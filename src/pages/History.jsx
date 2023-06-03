@@ -25,7 +25,7 @@ const History = () => {
 
                                 <Grid item xs={12} sm={4}>
                                     <Card style={{ height: '350px', border: '1px solid black' }}>
-                                        <Img alt="complex" src={elem.message} style={{ height: '90%' }} />
+                                        <Img key={i} alt="complex" src={elem.message} style={{ height: '90%' }} />
                                         <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
                                             <CardActions>
                                                 <IconButton aria-label="add to favorites">

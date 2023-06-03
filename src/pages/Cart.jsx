@@ -107,27 +107,27 @@ function Cart({ iSopen, isClose }) {
                                                     <Grid container spacing={2}>
                                                         <Grid item >
                                                             <ButtonBase sx={{ width: 128, height: 128 }}>
-                                                                <Img alt="complex" src={elem.message} />
+                                                                <Img alt="complex" key={i} src={elem.message} />
                                                             </ButtonBase>
                                                         </Grid>
                                                         <Grid item xs={12} sm container>
                                                             <Grid item xs container direction="column" spacing={2}>
                                                                 <Grid item xs>
-                                                                    <Typography gutterBottom variant="subtitle1" component="div" style={{ paddingTop: '5px' }}>
+                                                                    <Typography key={i} gutterBottom variant="subtitle1" component="div" style={{ paddingTop: '5px' }}>
                                                                         ID: {elem.id}
                                                                     </Typography>
-                                                                    <Typography variant="body2" gutterBottom>
+                                                                    <Typography key={i} variant="body2" gutterBottom>
                                                                         ${elem.price}
                                                                     </Typography>
                                                                     <ButtonGroup size="small" aria-label="small outlined button group">
-                                                                        <Button onClick={() => updateCount(elem.id, elem.count + 1)}>+</Button>
-                                                                        <Button>{elem.count}</Button>
-                                                                        <Button onClick={() => updateCount(elem.id, elem.count - 1)}>-</Button>
+                                                                        <Button key={i} onClick={() => updateCount(elem.id, elem.count + 1)}>+</Button>
+                                                                        <Button key={i}>{elem.count}</Button>
+                                                                        <Button key={i} onClick={() => updateCount(elem.id, elem.count - 1)}>-</Button>
                                                                     </ButtonGroup>
                                                                 </Grid>
                                                             </Grid>
                                                             <Grid item style={{ display: 'flex', alignItems: 'center' }}>
-                                                                <IconButton onClick={() => removeItem(elem.id)}>
+                                                                <IconButton key={i} onClick={() => removeItem(elem.id)}>
                                                                     <DeleteIcon style={{ color: 'red' }} />
                                                                 </IconButton>
                                                             </Grid>

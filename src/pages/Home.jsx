@@ -210,7 +210,7 @@ function Home() {
                         return (
                             <Grid item xs={12} sm={3}>
                                 <Card style={{ height: '250px', border: '1px solid black' }}>
-                                    <Img alt="complex" src={elem.message} />
+                                    <Img alt="complex" key={i} src={elem.message} />
                                 </Card>
                             </Grid>
                         )
